@@ -1,0 +1,27 @@
+{
+  "name": "meanstack",
+  "version": "1.0.0",
+  "description": "Mean Stack Application with Angular JS 2",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunalt2902/MeanStack.git"
+  },
+  "keywords": [
+    "Mean",
+    "Stack"
+  ],
+  "author": "Kunal Thorvat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kunalt2902/MeanStack/issues"
+  },
+  "homepage": "https://github.com/kunalt2902/MeanStack#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.3"
+  }
+}
