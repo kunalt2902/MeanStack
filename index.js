@@ -1,12 +1,21 @@
 const express = require('express');
 const app = express();
+const router = express.Router();
 const mongoose = require('mongoose');
-var config = require('./config/database.js');
-var path = require('path');
+const config = require('./config/database.js');
+const path = require('path');
+const authentication = require('./routes/authentication')(router);
+const bodyParser = require('body-parser')
 
 const port = 8080;
 
+
+//middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static(__dirname + '/client/dist'));
+app.use('/authentication',authentication);
+
 
 mongoose.connect(config.uri,(err) => {
 	if(err)
